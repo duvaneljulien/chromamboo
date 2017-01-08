@@ -38,6 +38,10 @@ namespace Chromamboo
             bambooApi = new BambooApi(bambooApiBaseUrl, username, password);
             bitbucketApi = new BitbucketApi(bitbucketApiBaseUrl, "MYV", "metis", username, password);
 
+            // Push Notifications
+            var pushNotifications = new PushNotificationProvider();
+            pushNotifications.Register(null);
+
             // TODO: retrieve a list of possible providers from the Command line arguments
             var presentationProviderNames = new[] { presentationProviderName };
 
